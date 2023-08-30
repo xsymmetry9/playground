@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
     mode: "development",
-    entry: "./src/carousel.js",
+    entry: "./index.js",
     devtool: "inline-source-map",
     output: {
         filename: '[name].js',

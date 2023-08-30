@@ -3,14 +3,36 @@ body{
     padding: 0;
     margin: 0;
 }
-h1{
+h1, h2, h3, p, a, span, label{
     color: white;
+}
+h1{
     font-size: 3rem;
-    text-align: center;
 }
 h2{
     font-size: 2.8rem;
+}
+.text-align-centered{
+    text-align: center;
+}
 
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.nav-menu > li{
+    list-style: none;
+    cursor: pointer;
+}
+.nav-menu > li > a{
+    font-size: 1em;
+    padding-bottom: .5em;
+}
+.nav-menu > li > a:focus,
+.nav-menu > li > a:hover{
+    color: red;
+    border-bottom: 1px solid red;
 }
 
 /* --------------------------------- Carousel-1 ------------------------------------- */
@@ -125,4 +147,48 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* --------------------- Forms --------------------------------- */
+
+p *{
+    display: block;
+}
+form{
+    width: 200px;
+    margin: 3em auto;
+}
+
+input[type="email"]{
+    appearance: none;
+
+    width: 100%;
+    border: 1px solid green;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+input:invalid{
+    border-color: #900;
+    background-color: #fdd;
+}
+
+input:focus:invalid{
+    outline: none;
+}
+
+.error{
+    width: 100%;
+    padding: 0;
+
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+
+    box-sizing: border-box;
+}
+
+.error.active{
+    padding: 0.3em;
 }
